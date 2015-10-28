@@ -1,0 +1,77 @@
+
+
+%buttonTemplate{
+
+
+  @include respond(full) {
+    display:inline-block;
+    margin-right: $gutter;
+  }
+
+  @include respond(desktop) {
+    display:inline-block;
+    margin-right: $gutter;
+  }
+
+  @include respond(tablets) {
+    display:inline-block;
+    margin-right: $gutter;
+  }
+  display:block;
+
+  background:red;
+  color:#FFF;
+  text-align: center;
+  padding: 0 3.2em;
+  line-height: 3em;
+
+  margin-bottom: $gutter;
+  border:3px solid red;
+  color:red;
+
+  text-transform: uppercase;
+  font-weight: 700;
+
+
+
+
+
+  &:hover{
+    cursor: pointer;
+    border-color: darken(red, 5%);
+  }
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+}
+
+%ghostButtonTemplate{
+    background: transparent;
+    border:3px solid red;
+}
+
+
+.button{
+  @extend %buttonTemplate;
+
+
+  &.block{
+    display:block;
+    float:none;
+    clear:both;
+    margin-right: 0;
+    &.ghost{
+      @extend %ghostButtonTemplate;
+    }
+  }
+
+  &.ghost{
+    @extend %ghostButtonTemplate;
+  }
+
+}
+
+
+

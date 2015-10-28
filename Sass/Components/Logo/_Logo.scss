@@ -1,0 +1,51 @@
+.logo{
+
+  //Desktop
+  @include respond(full) {
+    width: 180px;
+    height: 60px;
+    position: absolute; left: 50%;-moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  //Desktop
+  @include respond(desktop) {
+    width: 180px;
+    height: 60px;
+    position: absolute; left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  //Tablets
+  @include respond(tablets) {
+    width: 180px;
+    height: 60px;
+    position: absolute; left: 0;
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  width: 180px;
+  height: 60px;
+  position: absolute; left: 0;
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+
+}
+
+.mobilelogo{
+  display:block;width: 100%; padding-bottom: 10px; max-width: 180px; margin: 0 auto;
+}

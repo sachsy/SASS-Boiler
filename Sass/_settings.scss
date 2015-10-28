@@ -1,0 +1,91 @@
+/*
+SASS/settings.Scss
+Dan Smith. 2015
+*/
+
+//Responsive Break Points
+$width-full                         :   1200px;
+$width-desktop                      :   1000px;
+$width-tablet                       :   768px;
+$width-mobile                       :   320px;
+
+//Wrapper Size (matched to breakpoints)
+$container-full                     :   1150px;
+$container-desktop                  :   990px;
+$container-tablet                   :   90%;
+$container-mobile                   :   85%;
+
+//Grid Settings
+$total-columns                      :   12;
+$gutter                             :   10px;
+$wrap-background-color              :   transparent;
+$row-background-color               :   transparent;
+$module-background-color            :   #FFF;
+
+$brand-col :    #ed583a;
+$brand-dark :   #555;
+$brand-mid  :   #ccc;
+$brand-light :  #e8e8e8;
+
+
+//Typography Settings
+$font-family                   :   "ronnia",sans-serif;
+$font-size                     :   16px;
+$font-leading                  :   1.5;
+$font-letter-spacing           :   0.001em;
+$font-weight                   :   400;
+$font-color                    :   #111;
+
+
+$heading-font-transform : uppercase;
+$heading-font-weight: 700;
+$heading-letter-spacing: 0.02em;
+$heading-color: #000;
+$heading-margin-bottom: 0.5em;
+
+$heading-font-family                :   "ronnia",sans-serif;
+$heading-font-maxsize : 2.3;
+$heading-font-minsize : 1;
+$heading-font-minlineheight : 1.5;
+$heading-font-maxlineheight : 1.5;
+
+
+
+//Plugin Settings
+//MegaMenu
+$megadrop-background                :   #3d4223;
+$darklime                           :   #51612b;
+$megadrop-background-hover          :   #afd977;
+$megadrop-height                    :   50px;
+$megadrop-link-colour               :   #bdc3c7;
+$megadrop-font-size                 :   14px;
+$megamenu-dropdown-max-cols         :   5;
+$megadrop-dropdown-column-width     :   160px;
+
+//Mobile Menu - Sidr
+$sidr-background                    :   #f2f2f2;
+$sidr-font-family                   :   "lucida grande",tahoma,verdana,arial,sans-serif;
+$sidr-font-size                     :   14px;
+$sidr-font-color                    :   #666;
+$sidr-width                         :   290px;
+$sidr-padding                       :   10px;
+
+//Accordian
+$accordion-background               :   #ecf0f1;
+$accordion-link-background          :   #34495e;
+$accordion-link-color               :   #FFF;
+$accordion-link-hover-background    :   #949d7a;
+$accordion-link-hover-color         :   #2c3e50;
+$accordion-dropdown-background      :   #FFF;
+$accordion-dropdown-link-background :   #FFF;
+$accordion-dropdown-link-color      :   #222;
+
+//Tabbed Area
+$tabbedarea-background              :   #fff;
+$tabbedarea-border-color            :   #fff;
+$tabbedarea-tab-height              :   50px;
+$tabbedarea-tab-padding             :   20px;
+$tabbedarea-tab-bg                  :   #fff;
+$tabbedarea-tab-bg-active           :   #ecf0f1;
+$tabbedarea-content-bg              :   #FFF;
+

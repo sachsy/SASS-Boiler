@@ -1,0 +1,54 @@
+.spacer{
+  display: block;
+  height: 70px;
+  clear: both;
+}
+nav{
+  padding: 5px;
+  display: block;
+  background: #FFF;
+  color: #ccc;
+  height: 70px;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  -webkit-box-shadow: 0 3px 3px -1px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 3px -1px rgba(0,0,0,0.2);
+
+  span{
+
+      float: left;
+      color: #888;
+      font-size: 18px;
+      line-height: 60px;
+  }
+
+  ul{
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+
+    li{
+    display: inline-block;
+      padding: 0;
+      margin: 0;
+      a{
+      display: block;
+        height: 60px;
+        line-height: 60px;
+        background: #FFF;
+        padding: 0 10px;
+        color: #ed583a;
+        &:hover{
+          background: #FFF;
+          cursor: pointer;
+          color: #000;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,46 @@
+/*
+SASS/Framework/Forms.Scss
+Dan Smith. 2015
+*/
+
+form{
+  display: block;
+  margin-bottom:$gutter;
+
+  fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 1px solid #CCC;
+  }
+
+  legend{
+    color: $font-color;
+    background: #FFF;
+    padding:5px;
+  }
+
+  input{
+    display:block;
+    border: 1px solid #CCC;
+    padding: $gutter $gutter/2;
+    margin-bottom: $gutter;
+    margin-top:$gutter/2;
+    width: 100%;
+
+    &[type=submit], &[type=reset]{
+      width:100%;
+    }
+
+  }
+
+  label{
+    display:block;
+    font-size: 11px;
+  }
+
+}

@@ -1,0 +1,16 @@
+.google-maps {
+  overflow: hidden;
+  padding-bottom: 70%;
+  position: relative;
+  opacity:0.9;
+}
+.google-maps, .responsive-iframe {
+  border: 5px solid #fff;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 66%;
+  position: relative;
+  -webkit-box-shadow: 0 9px 12px -4px rgba(0,0,0,0.3);
+  box-shadow: 0 9px 12px -4px rgba(0,0,0,0.3);
+
+}

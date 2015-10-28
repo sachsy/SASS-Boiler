@@ -1,0 +1,168 @@
+/*
+SASS/Framework/Mixins/grid.Scss
+Dan Smith. 2015
+*/
+
+//Correct Gutters on end Items
+@mixin tablet(){
+  &:nth-child(2n+1){padding-left:0;}
+  &:nth-child(2n){padding-right:0;}
+  &.childodd{padding-left:0 !important;}
+  &.childeven{padding-right:0 !important;}
+}
+
+@mixin createcustomgrid($maxcols, $colgutter){
+  //Create Columns 1-Col Number
+  @for $i from 1 through $maxcols {
+    @if $i == 4
+    {
+      .col-#{$i}full {
+
+        @include respond(full)
+        {
+          float: left;
+          width: (100 / $maxcols) * $i +0%;
+          padding-left: $colgutter/2;
+          padding-right: $colgutter/2;
+          margin-left: 0;
+        }
+
+        @include respond(desktop)
+        {
+          float: left;
+          width: (100 / $maxcols) * $i +0%;
+          padding-left: $colgutter/2;
+          padding-right: $colgutter/2;
+          margin-left: 0;
+        }
+
+        @include respond(tablets)
+        {
+          float: none;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+        }
+
+        width:100%;
+        padding:0;
+        &:first-child{padding-left:0;}
+        &:last-child{padding-right:0;}
+        &.lastchild{padding-right:0 !important;}
+      }
+
+
+    }
+    .col-#{$i} {
+      $currentcol : $i;
+
+      @include respond(full)
+      {
+        float: left;
+        width: (100 / $maxcols) * $i +0%;
+        padding-left: $gutter/2;
+        padding-right: $gutter/2;
+        margin-left: 0;
+      }
+
+      @include respond(desktop)
+      {
+        float: left;
+        width: (100 / $maxcols) * $i +0%;
+        padding-left: $colgutter/2;
+        padding-right: $colgutter/2;
+        margin-left: 0;
+      }
+
+      @include respond(tablets)
+      {
+        float: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        //If less than 1/3 total cols
+        @if $currentcol == 3 or $currentcol == 4
+        {
+          width: 92%;
+          margin-left: 4%;
+          //@include tablet();
+
+        }
+      }
+
+      width:100%;
+      padding:0;
+
+      @if $currentcol == 3 or $currentcol == 4
+      {
+        width: 92%;
+        margin-left: 4%;
+        //@include tablet();
+      }
+
+      &:first-child{padding-left:0;}
+      &:last-child{padding-right:0;}
+      &.lastchild{padding-right:0 !important;}
+    }
+  }
+}
+
+@mixin creategrid($maxcols, $colgutter){
+  //Create Columns 1-Col Number
+  @for $i from 1 through $maxcols {
+    .col-#{$i} {
+      $currentcol : $i;
+
+      @include respond(full)
+      {
+        float: left;
+        width: (100 / $maxcols) * $i +0%;
+        padding-left: $gutter/2;
+        padding-right: $gutter/2;
+        margin-left: 0;
+      }
+
+      @include respond(desktop)
+      {
+        float: left;
+        width: (100 / $maxcols) * $i +0%;
+        padding-left: $colgutter/2;
+        padding-right: $colgutter/2;
+      }
+
+      @include respond(tablets)
+      {
+        float: left;
+        width: (100 / $maxcols) * $i +0%;
+        padding-left: $colgutter/2;
+        padding-right: $colgutter/2;
+
+      }
+
+      width:100%;
+      padding:0;
+
+
+      &.halftablet{
+        @include respond(tablets)
+        {
+          float: left;
+          width: 50%;
+          padding-left: $colgutter/2;
+          padding-right: $colgutter/2;
+          margin-left: 0;
+
+        }
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+
+

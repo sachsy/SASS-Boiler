@@ -1,0 +1,22 @@
+/*
+SASS/Framework/Mixins/respond.Scss
+Dan Smith. 2015
+*/
+
+@mixin respond($media) {
+  @if $media == phones {
+    @media only screen and (max-width: $width-tablet - 1) { @content; }
+  }
+  @if $media == tablets {
+    @media only screen and (min-width: $width-tablet) and (max-width: $width-desktop - 1) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $width-tablet) and (max-width: $width-full - 1){ @content;}
+  }
+  @else if $media == full {
+    @media only screen and (min-width: $width-full) { @content; }
+  }
+  @else if $media == print {
+    @media print { @content; }
+  }
+}

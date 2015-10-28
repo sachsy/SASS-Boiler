@@ -1,0 +1,164 @@
+/*
+SASS/Framework/Helpers.Scss
+Dan Smith. 2015
+*/
+
+
+.mobile-text-center{
+  //Desktop
+  @include respond(full) {
+    text-align: left;
+  }
+
+  //Desktop
+  @include respond(desktop) {
+    text-align: left;
+  }
+
+  //Tablets
+  @include respond(tablets) {
+    text-align: left;
+  }
+
+  text-align: center;
+}
+
+//Responsive Classes
+.mobilehide{
+
+  //Desktop
+  @include respond(full) {
+    display:block !important;
+  }
+
+  //Desktop
+  @include respond(desktop) {
+    display:block !important;
+  }
+
+  //Tablets
+  @include respond(tablets) {
+    display:block !important;
+  }
+
+  display:none !important;
+}
+
+//Responsive Classes
+.mobileshow{
+
+  //Desktop
+  @include respond(full) {
+    display:none !important;
+  }
+
+  //Desktop
+  @include respond(desktop) {
+    display:none !important;
+  }
+
+  //Tablets
+  @include respond(tablets) {
+    display:none !important;
+  }
+  display:block !important;
+
+}
+
+
+.mobiletablethide{
+
+  //Desktop
+  @include respond(full) {
+    display:block !important;
+  }
+
+  //Desktop
+  @include respond(desktop) {
+    display:block !important;
+  }
+
+  //Tablets
+  @include respond(tablets) {
+    display:none !important;
+  }
+
+  display:none !important;
+}
+
+
+
+.google-maps, .responsive-iframe{
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+
+//Alignment
+.centercol{
+  position:relative;
+  text-align:center
+}
+.floatright{
+  float: right;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+
+
+//Padding
+.pad{
+  padding:$gutter;
+}
+
+.padtop{
+  padding-top:$gutter;
+}
+
+//margin
+
+.flushbottom{
+  margin-bottom: 0;
+}
+
+.flushtop{
+  margin-top:0;
+}
+.flushleft{
+  margin-left:0;
+}
+.flushright{
+  margin-right: 0;
+}
+
+
+
+//clear
+
+.clear{
+  display:block;
+  width: 100%;
+  clear: both;
+}
+
+.fauxclear{
+  display:block;
+  width: 100%;
+  clear: both;
+  height: 10px;
+}
+

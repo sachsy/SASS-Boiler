@@ -1,0 +1,32 @@
+/*
+SASS/Framework/list-links.Scss
+Dan Smith. 2015
+*/
+
+
+//links
+
+a{
+  color:$brand-dark;
+  text-decoration: none;
+  &:hover{
+    color:$brand-col;
+  }
+  &:active, &.active{
+    color:$brand-col;
+    text-decoration: none;
+  }
+}
+
+.link{
+  bottom: 10px;
+  display: block;
+  font-size: 12px;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  text-align: right;
+
+}
+
+

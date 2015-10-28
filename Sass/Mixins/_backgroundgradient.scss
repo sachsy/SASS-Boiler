@@ -1,0 +1,18 @@
+/*
+SASS/Framework/Mixins/Backgroundgradient.Scss
+Dan Smith. 2015
+*/
+
+@mixin background-gradient($colorA, $colorB, $stepA: 0, $stepB: 1){
+
+  background: $colorA;
+  background: -moz-linear-gradient(top, $colorA percentage($stepA), $colorB percentage($stepB));
+  background: -webkit-gradient(left top, left bottom, color-stop(percentage($stepA), $colorA), color-stop(percentage($stepB), $colorB));
+  background: -webkit-linear-gradient(top, $colorA percentage($stepA), $colorB percentage($stepB));
+  background: -o-linear-gradient(top, $colorA percentage($stepA), $colorB percentage($stepB));
+  background: -ms-linear-gradient(top, $colorA percentage($stepA), $colorB percentage($stepB));
+  background: linear-gradient(to bottom, $colorA percentage($stepA), $colorB percentage($stepB));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$colorA, $colorB, GradientType=0 );
+
+}
+

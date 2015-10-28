@@ -1,0 +1,44 @@
+/*
+SASS/Framework/Tables.Scss
+Dan Smith. 2015
+*/
+
+table{
+
+  width:100%;
+  display: table;
+  border:2px solid #93b2c7;
+
+    tr{
+      background:#FFF;
+      display:table-row;
+      height:  $gutter*2;
+      line-height: $gutter*2;
+
+      th{
+        background:#000;
+        color: #FFF;
+        padding:4px;
+        color: #93b2c7;
+        font-size: 110%;
+      }
+
+      td{
+        text-align: right;
+        border-right: 1px solid #93b2c7;
+        padding:3px;
+        &:last-child{
+          border-left: 0;
+        }
+      }
+
+
+      &:nth-child(odd){
+        background: rgba(#93b2c7,0.2);
+      }
+
+    }
+
+
+
+}

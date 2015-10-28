@@ -1,0 +1,111 @@
+$promo-height :    490px;
+
+.promo{
+  padding-top:10px;
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: $promo-height;
+  background: #eee;
+
+  .module{
+    background-size: cover; height: 380px;
+
+    .text-area{
+
+      @include respond(full) {
+        text-align: left;
+        background: rgba(0,0,0,0);
+        padding: 0px;
+      }
+
+      //Desktop
+      @include respond(desktop) {
+        text-align: left;
+        background: rgba(0,0,0,0);
+        padding: 0px;
+      }
+
+      //Tablets
+      @include respond(tablets) {
+        text-align: left;
+        background: rgba(0,0,0,0);
+        padding: 0px;
+      }
+      background: rgba(0,0,0,0.4);
+      padding: 10px;
+      text-align: center;
+      position: absolute; bottom: 30px; left: 30px; right: 30px;
+      h1{
+        @include respond(full) {
+          font-size:42px;
+        }
+
+        //Desktop
+        @include respond(desktop) {
+         font-size:36px;
+        }
+
+        //Tablets
+        @include respond(tablets) {
+          font-size:32px;
+        }
+        color: #ed583a; font-size:24px;text-shadow: 1px 1px 2px #1F1F1F; line-height: 1.2; margin-bottom: 10px;
+
+      }
+
+      h5{
+        @include respond(full) {
+          font-size:22px;
+
+        }
+
+        //Desktop
+        @include respond(desktop) {
+          font-size:18px;
+        }
+
+        //Tablets
+        @include respond(tablets) {
+          font-size:16px;
+        }
+        color: #ccc; font-size:15px;text-shadow: 1px 1px 2px #1F1F1F; line-height: 1.2; margin-bottom: 10px;
+        max-width: 800px;
+      }
+
+      p{
+
+        @include respond(full) {
+          max-width: 80%;
+        }
+
+        //Desktop
+        @include respond(desktop) {
+          max-width: 80%;
+        }
+
+        //Tablets
+        @include respond(tablets) {
+          max-width: 80%;
+        }
+        max-width: 90%; font-size:15px; color: #ccc;text-shadow: 1px 1px 2px #1F1F1F;
+
+
+
+      }
+      a{
+        color: #93b2c7;
+        padding: 5px;
+
+        display: inline-block;
+      }
+
+    }
+  }
+
+}
+
+.promospace{
+  display: block; height: $promo-height; clear: both;
+}

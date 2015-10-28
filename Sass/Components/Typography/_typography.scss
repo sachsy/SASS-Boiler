@@ -1,0 +1,117 @@
+/*
+SASS/Framework/Typography.Scss
+Dan Smith. 2015
+*/
+
+@function pxem($pxval, $base: 16px) {
+  // Function to take a pixel value and divide it by a base value in order to
+  // return the size in ems. Default base value is 16px
+  @return ($pxval / $base) * 1em; // multiply by 1em to convert px to ems.
+}
+
+
+html{
+    font-family: $font-family;
+    font-size: pxem($font-size);
+
+}
+
+body{
+    @include respond(full) {
+        font-size: 100%;
+    }
+    //Desktop
+    @include respond(desktop) {
+        font-size: 95%;
+    }
+    //Desktop
+    @include respond(tablets) {
+        font-size: 90%;
+    }
+
+    font-size: 85%;
+}
+
+
+p{
+
+  letter-spacing: $font-letter-spacing;
+  line-height: $font-leading;
+  font-weight: $font-weight;
+  margin-bottom: $gutter/2;
+
+  strong{
+    font-weight: 700;
+  }
+
+  i{
+    font-style: italic;
+  }
+
+  &.lead{
+    font-size: 110%;
+  }
+
+}
+
+
+
+
+
+//Base styles for headings
+@for $h from 0 through 6 {
+    h#{$h+1} {
+
+      font-family: $heading-font-family;
+
+
+        $currentpercent : ((100 / 6) * $h);
+        $onepercent : ($heading-font-maxsize - $heading-font-minsize) / 100;
+        $size : $onepercent * $currentpercent;
+        $onepercentheight : ($heading-font-minlineheight - $heading-font-maxlineheight) / 100;
+        $lineheightsize : $onepercentheight * $currentpercent;
+
+        //text-transform: $heading-font-transform;
+
+        font-size: ($heading-font-maxsize - $size) + 0em;
+        //line-height: ($heading-font-minlineheight - $lineheightsize) + 0em;
+
+        line-height: 1.5;
+
+        font-weight: $heading-font-weight;
+        letter-spacing: $heading-letter-spacing;
+        color: $heading-color;
+        position: relative;
+
+        &.heading{
+
+            padding-left: $gutter*2;
+            &:after{
+                background: #303033;
+                bottom: 4px;
+                content: "";
+                display: block;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: $gutter;
+            }
+
+        }
+
+    }
+}
+
+h1 + p {
+
+  font-size:1.5em;
+  &:first-letter{
+    font-size: 1.1em;
+  }
+}
+
+
+h5{
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
